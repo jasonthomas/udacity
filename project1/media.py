@@ -20,4 +20,4 @@ class Movie():
         """
         Opens youtube url for specific movie.
         """
-        webbrowser.open(self.youtube_url)
+        webbrowser.open(self.trailer_youtube_url)
