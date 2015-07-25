@@ -15,3 +15,5 @@ Change directory to project1:
 Generate movie trailer website:
 
     python main.py
+
+You should now be viewing the movie trailer website!
