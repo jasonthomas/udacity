@@ -132,8 +132,15 @@ def potentialCompetitors(id):
     conn.close()
     previous_competitors = set([i for sub in result for i in sub])
     previous_competitors.add(id)
-    players = set(getPlayerIds())
-    return list(players.difference(previous_competitors))
+    players = getPlayerIds()
+
+    # remove previous_competitors from players
+    for i in previous_competitors:
+        for j in players:
+            if j == i:
+                players.remove(j)
+
+    return players
 
 
 def swissPairings():
